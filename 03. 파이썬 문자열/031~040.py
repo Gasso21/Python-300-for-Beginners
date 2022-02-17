@@ -47,3 +47,5 @@ print(h[:10])
 
 #040
 data = "   삼성전자    "
+data = data.strip()
+print(data)
