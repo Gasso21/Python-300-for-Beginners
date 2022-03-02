@@ -1,3 +1,4 @@
+"""
 #121
 x = input()
 if x.islower():
@@ -32,8 +33,22 @@ elif x[1] == "유로":
 elif x[1] == "위안":
     result = 171 * int(x[0])
 print("%0.2d 원" %result)
+"""
 
 #124
+x1 = input("input number: ")
+x2 = input("input number: ")
+x3 = input("input number: ")
+
+if x1 >= x2:
+    result = x1
+elif x1 >= x3:
+    result = x1
+elif x2 >= x3:
+    result = x2
+else:
+    result = x3
+print(result)
 
 #125
 
