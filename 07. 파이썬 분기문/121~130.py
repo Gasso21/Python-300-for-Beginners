@@ -1,4 +1,3 @@
-"""
 #121
 x = input()
 if x.islower():
@@ -33,31 +32,95 @@ elif x[1] == "유로":
 elif x[1] == "위안":
     result = 171 * int(x[0])
 print("%0.2d 원" %result)
-"""
 
 #124
-x1 = input("input number: ")
-x2 = input("input number: ")
-x3 = input("input number: ")
+x1 = int(input("input number: "))
+x2 = int(input("input number: "))
+x3 = int(input("input number: "))
 
+result = 0
 if x1 >= x2:
-    result = x1
-elif x1 >= x3:
-    result = x1
-elif x2 >= x3:
-    result = x2
+    if x1 >= x3:
+        result = x1
+    else:
+        result = x3
 else:
-    result = x3
+    if x2 >= x3:
+        result = x2
+    else:
+        result = x3
 print(result)
 
 #125
+phone = input("휴대전화 번호 입력: ")
+phone = phone.split("-")
+if phone[0] == '011':
+    result = 'SKT'
+elif phone[0] == '016':
+    result = 'KT'
+elif phone[0] == '019':
+    result = 'LGU'
+else:
+    result = '알수없음'
+
+print("당신은 %s 사용자입니다." %result)
 
 #126
+u = input("우편번호: ")
+u = int(u[2])
+if 0 <= u <= 2:
+    print("강북구")
+elif 3 <= u <= 5:
+    print("도봉구")
+else:
+    print("노원구")
 
 #127
+p = input("주민등록번호: ")
+p = int(p[7])
+if p == 1 or p == 3:
+    print("남자")
+else:
+    print("여자")
+p = input("주민등록번호: ")
+p = int(p[7])
+if p == 1 or p == 3:
+    print("남자")
+else:
+    print("여자")
 
 #128
+p = input("주민등록번호: ")
+p = int(p[-6:-4])
+print(p)
+if 0 <= p <= 8:
+    print("서울 입니다.")
+else:
+    print("서울이 아닙니다.")
 
 #129
+p = list(input("주민등록번호: "))
+p.pop(6)
+i = 2
+result = 0
+for x in p[:-1]:
+    result += int(x) * i
+    if i == 9:
+        i = 1
+    i += 1
+
+result = 11 - (result % 11)
+if result == int(p[-1]):
+    print("유효한 주민등록번호입니다.")
+else:
+    print("유효하지 않은 주민등록번호입니다.")
 
 #130
+import requests
+btc = requests.get("https://api.bithumb.com/public/ticker/").json()['data']
+print(btc)
+var = int(btc['max_price']) - int(btc['min_price'])
+if int(btc['opening_price']) + var > int(btc['max_price']):
+    print("상승장")
+else:
+    print("하락장")
