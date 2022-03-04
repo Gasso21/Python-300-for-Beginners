@@ -33,6 +33,16 @@ elif x[1] == "위안":
     result = 171 * int(x[0])
 print("%0.2d 원" %result)
 
+"""
+환율 = {"달러": 1167, 
+        "엔": 1.096, 
+        "유로": 1268, 
+        "위안": 171}
+user = input("입력: ")
+num, currency = user.split()
+print(float(num) * 환율[currency], "원")
+"""
+
 #124
 x1 = int(input("input number: "))
 x2 = int(input("input number: "))
@@ -50,6 +60,22 @@ else:
     else:
         result = x3
 print(result)
+
+"""
+num1 = input("input number1: ")
+num2 = input("input number2: ")
+num3 = input("input number3: ")
+num1 = int(num1)
+num2 = int(num2)
+num3 = int(num3)
+
+if num1 >= num2 and num1 >= num3:
+    print(num1)
+elif num2 >= num1 and num2 >= num3:
+    print(num2)
+else:
+    print(num3)
+"""
 
 #125
 phone = input("휴대전화 번호 입력: ")
@@ -75,13 +101,18 @@ elif 3 <= u <= 5:
 else:
     print("노원구")
 
-#127
-p = input("주민등록번호: ")
-p = int(p[7])
-if p == 1 or p == 3:
-    print("남자")
+"""
+우편번호 = input("우편번호: ")
+우편번호 = 우편번호[:3]
+if 우편번호 in ["010", "011", "012"]:
+    print("강북구")
+elif 우편번호 in ["014", "015", "016"]:
+    print("도봉구")
 else:
-    print("여자")
+    print("노원구")
+"""
+
+#127
 p = input("주민등록번호: ")
 p = int(p[7])
 if p == 1 or p == 3:
