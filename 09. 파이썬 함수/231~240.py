@@ -20,14 +20,16 @@ make_url("naver")
 
 #233
 def make_list(string):
-    l = []
-    l = list(string)
-    return l
+    a = list(string)
+    return a
 
-make_list("abcd")
+l = make_list("abcd")
 print(l)
 
 #234
+
+pickup_even([3, 4, 5, 6, 7, 8])
+
 
 #235
 
