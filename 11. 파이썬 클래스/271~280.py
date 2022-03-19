@@ -420,7 +420,6 @@ class Account:
         for amount in self.deposit_log:
             print(amount)
 
-
 k = Account("Kim", 1000)
 k.deposit(100)
 k.deposit(200)
