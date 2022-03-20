@@ -99,6 +99,6 @@ class 부모:
 class 자식(부모):
   def __init__(self):
     print("자식생성")
-    super().__init__()
+    super().__init__() #self
 
 나 = 자식()
